@@ -141,7 +141,7 @@ namespace Hazel {
 				glGetShaderInfoLog(shader, maxLength, &maxLength, &infoLog[0]);
 
 				glDeleteShader(shader);
-
+				
 				HZ_CORE_ERROR("{0}", infoLog.data());
 				HZ_CORE_ASSERT(false, "Shader compilation failure!");
 				break;

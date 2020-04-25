@@ -18,6 +18,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/../Hazel/src
     ${CMAKE_CURRENT_SOURCE_DIR}/../Hazel/vendor/spdlog/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../Hazel/vendor/glm/
+    ${CMAKE_CURRENT_SOURCE_DIR}/../Hazel/vendor
     )
 
 ADD_LIBRARY(glfw STATIC IMPORTED)

@@ -118,11 +118,11 @@ ExampleLayer::ExampleLayer()
 		)";
 
 	m_FlatColorShader = Hazel::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
+	
+	auto textureShader = m_ShaderLibrary.Load("/home/greg9702/Documents/Dev/Hazel/Linux-Sandbox/assets/shaders/FlatColor.glsl");
 
-	auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
-
-	m_Texture = Hazel::Texture2D::Create("assets/textures/Checkerboard.png");
-	m_ChernoLogoTexture = Hazel::Texture2D::Create("assets/textures/ChernoLogo.png");
+	m_Texture = Hazel::Texture2D::Create("/home/greg9702/Documents/Dev/Hazel/Linux-Sandbox/assets/textures/Checkerboard.png");
+	m_ChernoLogoTexture = Hazel::Texture2D::Create("/home/greg9702/Documents/Dev/Hazel/Linux-Sandbox/assets/textures/ChernoLogo.png");
 
 	textureShader->Bind();
 	textureShader->SetInt("u_Texture", 0);
